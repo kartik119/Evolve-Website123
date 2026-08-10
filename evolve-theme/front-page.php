@@ -310,7 +310,7 @@ get_header();
                 <div class="ind-item"><i class="fa-solid fa-child-reaching"></i><span>Kidswear<br>Brands</span></div>
                 <div class="ind-item"><i class="fa-solid fa-hotel"></i><span>Hotels &<br>Hospitality</span></div>
                 <div class="ind-item"><i class="fa-solid fa-house-medical"></i><span>Healthcare &<br>Clinics</span></div>
-                <div class="ind-item"><i class="fa-solid fa-calendar-check"></i><span>Events &<br>Promotional Wear</span></div>
+
                 <div class="ind-item"><i class="fa-solid fa-cart-shopping"></i><span>E-commerce<br>Fashion Brands</span></div>
                 <div class="ind-item"><i class="fa-solid fa-person-running"></i><span>Sports &<br>Activewear</span></div>
             </div>

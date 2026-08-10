@@ -427,4 +427,34 @@ function initMobileNav() {
     }
 }
 
+// Testimonial Slider Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const testiSlides = document.querySelectorAll('.testi-slide');
+    const testiPrev = document.getElementById('testi-prev');
+    const testiNext = document.getElementById('testi-next');
+    let currentTestiSlide = 0;
 
+    if (testiSlides.length > 0 && testiPrev && testiNext) {
+        function showTestiSlide(index) {
+            testiSlides.forEach(slide => {
+                slide.classList.remove('active-slide');
+                slide.style.display = 'none';
+            });
+            testiSlides[index].classList.add('active-slide');
+            testiSlides[index].style.display = 'block';
+            currentTestiSlide = index;
+        }
+
+        testiNext.addEventListener('click', () => {
+            let index = currentTestiSlide + 1;
+            if (index >= testiSlides.length) index = 0;
+            showTestiSlide(index);
+        });
+
+        testiPrev.addEventListener('click', () => {
+            let index = currentTestiSlide - 1;
+            if (index < 0) index = testiSlides.length - 1;
+            showTestiSlide(index);
+        });
+    }
+});

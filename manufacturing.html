@@ -312,23 +312,57 @@
 
     <!-- Contact Section -->
     <div class="mfg-contact-wrap">
-        <div class="mfg-contact-img">
-            <img src="images/mfg_contact.jpg" alt="Factory Floor">
-        </div>
-        <div class="mfg-contact-form-area">
+        <div class="mfg-contact-form-area" style="flex: 2;">
             <p style="color: var(--gold); font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">CONTACT US</p>
             <h2 style="font-size: 2.5rem; font-family: var(--font-serif); font-weight: 400; margin: 0 0 30px 0; color: white;">Have Questions?<br>Get in Touch!</h2>
             
             <form id="mfgForm" onsubmit="return false;">
-                <div class="mfg-form-grid">
-                    <input type="text" id="m_first_name" class="mfg-form-input" placeholder="First Name" required>
-                    <input type="text" id="m_last_name" class="mfg-form-input" placeholder="Last Name" required>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <input type="text" id="m_first_name" class="mfg-form-input" placeholder="First Name *" required>
+                    <input type="text" id="m_last_name" class="mfg-form-input" placeholder="Last Name *" required>
                 </div>
-                <div class="mfg-form-grid">
-                    <input type="email" id="m_email" class="mfg-form-input" placeholder="Email Address" required>
-                    <input type="tel" id="m_phone" class="mfg-form-input" placeholder="Phone Number" required>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <input type="text" id="m_company" class="mfg-form-input" placeholder="Company / Brand Name *" required>
+                    <input type="text" id="m_quantity" class="mfg-form-input" placeholder="Quantity *" required>
                 </div>
-                <input type="text" id="m_message" class="mfg-form-input" placeholder="Message" style="margin-bottom: 20px;" required>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <input type="email" id="m_email" class="mfg-form-input" placeholder="Email Address *" required>
+                    <input type="tel" id="m_phone" class="mfg-form-input" placeholder="Phone Number *" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <select id="m_category" class="mfg-form-input" style="color: #666;" required>
+                        <option value="">Product Category *</option>
+                        <option value="corporate">Corporate Uniforms</option>
+                        <option value="kidswear">Kidswear</option>
+                        <option value="white-label">White-label Fashion</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <select id="m_fabric" class="mfg-form-input" style="color: #666;" required>
+                        <option value="">Fabric Preference *</option>
+                        <option value="cotton">100% Cotton</option>
+                        <option value="blend">Poly-Cotton Blend</option>
+                        <option value="sustainable">Sustainable / Organic</option>
+                        <option value="unsure">Not sure yet</option>
+                    </select>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <select id="m_branding" class="mfg-form-input" style="color: #666;" required>
+                        <option value="">Branding / Logo *</option>
+                        <option value="embroidery">Embroidery</option>
+                        <option value="print">Screen Printing</option>
+                        <option value="both">Both</option>
+                        <option value="none">None</option>
+                    </select>
+                    <select id="m_timeline" class="mfg-form-input" style="color: #666;" required>
+                        <option value="">Preferred Timeline *</option>
+                        <option value="urgent">Urgent (2-4 Weeks)</option>
+                        <option value="standard">Standard (4-8 Weeks)</option>
+                        <option value="relaxed">Relaxed (8+ Weeks)</option>
+                    </select>
+                </div>
+                <input type="text" id="m_location" class="mfg-form-input" placeholder="Location / City *" style="margin-bottom: 20px;" required>
+
+                <textarea id="m_message" class="mfg-form-input" placeholder="Your Message (Optional)" style="margin-bottom: 20px; height: 100px; resize: vertical;"></textarea>
                 <div class="captcha-box" style="margin-bottom: 20px; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(255,255,255,0.2);">
                     <span style="font-weight: 600; color: white;"><i class="fa-solid fa-shield-halved text-gold"></i> Security Check: <span id="m_captcha_q"></span></span>
                     <input type="number" id="m_captcha_a" class="mfg-form-input" style="width: 100px; margin-bottom: 0; padding: 10px;" placeholder="Answer" required>
@@ -365,8 +399,15 @@
                     const data = {
                         first_name: document.getElementById('m_first_name').value,
                         last_name: document.getElementById('m_last_name').value,
+                        company: document.getElementById('m_company').value,
+                        quantity: document.getElementById('m_quantity').value,
                         email: document.getElementById('m_email').value,
                         phone: document.getElementById('m_phone').value,
+                        category: document.getElementById('m_category').value,
+                        fabric: document.getElementById('m_fabric').value,
+                        branding: document.getElementById('m_branding').value,
+                        timeline: document.getElementById('m_timeline').value,
+                        location: document.getElementById('m_location').value,
                         message: document.getElementById('m_message').value,
                         source_page: 'Manufacturing Page'
                     };
@@ -409,7 +450,7 @@
                 </div>
             </div>
             <div class="mfg-feature-item">
-                <i class="fa-solid fa-shield-check"></i>
+                <i class="fa-solid fa-shield-halved"></i>
                 <div>
                     <h6>Reliable Quality</h6>
                     <p>Consistent, durable, on-time delivery.</p>
