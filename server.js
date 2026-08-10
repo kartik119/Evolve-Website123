@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const sqlite3 = require('sqlite3').verbose();
+const { Pool } = require('pg');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
@@ -18,14 +18,9 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.static(__dirname));
 
-// SQLite Database Connection
-const db = new sqlite3.Database('./database.sqlite', (err) => {
-    if (err) {
-        console.error('Error opening database', err.message);
-    } else {
-        console.log('Connected to SQLite database successfully!');
-        initializeDatabase();
-    }
+// PostgreSQL Database Connection
+const db = new Pool({
+    connectionString: process.env.DATABASE_URL
 });
 
 function initializeDatabase() {
