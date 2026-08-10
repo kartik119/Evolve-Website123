@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Get a Quote | Evolve Clothing Co.</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <i class="fa-solid fa-shirt text-gold" style="font-size:1.6rem;"></i>
+                <span style="font-family: var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--navy); letter-spacing:1px; line-height:1;">EVOLVE<span style="font-size:0.5rem; letter-spacing:3.5px; font-family:var(--font-sans); color:var(--text-light); display:block; margin-top:2px; font-weight:600;">CLOTHING CO.</span></span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul style="display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-dropdown"><a href="services.html">Our Services <i class="fa-solid fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <li>
+                            <a href="services.html">
+                                <img src="images/white_label_featured_1779784066592.png" alt="White-Label Manufacturing">
+                                <span>White-Label Manufacturing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kids.html">
+                                <img src="images/kids_featured_1779784085703.png" alt="Kidswear Manufacturing">
+                                <span>Kidswear Manufacturing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="uniforms.html">
+                                <img src="images/uniforms_featured_1779784099366.png" alt="Uniform Manufacturing">
+                                <span>Uniform Manufacturing</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="manufacturing.html">Research & Manufacturing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="https://wa.me/919833323469" target="_blank" rel="noopener" class="icon-link dynamic-wa" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="quote.html" class="btn btn-navy" style="padding: 12px 24px; font-size:0.75rem;">REQUEST QUOTE</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="quote-hero">
+        <div class="container">
+            <h1>Get a Quote</h1>
+            <p>Tell us about your apparel requirements and our team will prepare a tailored quote for your brand, uniforms, kidswear, or bulk manufacturing needs.</p>
+            <div style="margin-top: 25px; font-size: 0.9rem; font-weight: 500;">
+                <a href="index.html" style="color: var(--gold);">Home</a> 
+                <span style="color: rgba(255,255,255,0.5); margin: 0 10px;"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span> 
+                <span>Get a Quote</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section-padding" style="background: var(--bg-cream);">
+        <div class="container quote-split">
+            
+            <!-- Left: Form Area -->
+            <div class="quote-main">
+                <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--navy); margin-bottom: 30px; font-weight: 400;">Request Your Custom Quote</h2>
+                
+                <form id="quoteForm" onsubmit="return false;">
+                    <div class="quote-form-grid">
+                        <input type="text" id="q_first_name" class="quote-input" placeholder="First Name *" required>
+                        <input type="text" id="q_last_name" class="quote-input" placeholder="Last Name *" required>
+                    </div>
+                    <div class="quote-form-grid">
+                        <input type="text" id="q_company" class="quote-input" placeholder="Company / Brand Name *" required>
+                        <input type="text" id="q_quantity" class="quote-input" placeholder="Quantity *" required>
+                    </div>
+                    <div class="quote-form-grid">
+                        <input type="email" id="q_email" class="quote-input" placeholder="Email Address *" required>
+                        <input type="tel" id="q_phone" class="quote-input" placeholder="Phone Number *" required>
+                    </div>
+                    
+                    <div class="quote-form-grid">
+                        <select id="q_category" class="quote-input text-light" required>
+                            <option value="">Product Category *</option>
+                            <option value="corporate">Corporate Uniforms</option>
+                            <option value="kidswear">Kidswear</option>
+                            <option value="white-label">White-label Fashion</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <select id="q_order_quantity" class="quote-input text-light" required>
+                            <option value="">Order Quantity *</option>
+                            <option value="100-500">100 - 500 pcs</option>
+                            <option value="500-1000">500 - 1,000 pcs</option>
+                            <option value="1000-5000">1,000 - 5,000 pcs</option>
+                            <option value="5000+">5,000+ pcs</option>
+                        </select>
+                    </div>
+
+                    <div class="quote-form-grid">
+                        <select id="q_fabric" class="quote-input text-light" required>
+                            <option value="">Fabric Preference *</option>
+                            <option value="cotton">100% Cotton</option>
+                            <option value="blend">Poly-Cotton Blend</option>
+                            <option value="sustainable">Sustainable / Organic</option>
+                            <option value="unsure">Not sure yet</option>
+                        </select>
+                        <select id="q_branding" class="quote-input text-light" required>
+                            <option value="">Custom Branding / Logo Requirement *</option>
+                            <option value="embroidery">Embroidery</option>
+                            <option value="print">Screen Printing</option>
+                            <option value="both">Both</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+
+                    <div class="quote-form-grid">
+                        <input type="text" id="q_location" class="quote-input" placeholder="Location / City *" required>
+                        <select id="q_timeline" class="quote-input text-light" required>
+                            <option value="">Preferred Timeline *</option>
+                            <option value="urgent">Urgent (2-4 Weeks)</option>
+                            <option value="standard">Standard (4-8 Weeks)</option>
+                            <option value="relaxed">Relaxed (8+ Weeks)</option>
+                        </select>
+                    </div>
+
+                    <div class="quote-upload">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <p style="font-weight: 500; color: var(--navy); margin-bottom: 5px;">Drag & drop files here or <span style="color: var(--gold); text-decoration: underline;">browse</span></p>
+                        <p>JPG, PNG, PDF up to 10MB</p>
+                    </div>
+
+                    <textarea id="q_message" class="quote-input" rows="4" placeholder="Project Details / Message (Optional)" style="margin-bottom: 30px; resize: vertical;"></textarea>
+
+                    <button type="submit" id="q_submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.1rem; justify-content: center; background: var(--gold);">
+                        <i class="fa-regular fa-paper-plane" style="margin-right: 10px;"></i> Submit Quote Request
+                    </button>
+                </form>
+
+                <script>
+                    document.getElementById('quoteForm').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const btn = document.getElementById('q_submit');
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right: 10px;"></i> Submitting...';
+                        btn.disabled = true;
+
+                        const data = {
+                            first_name: document.getElementById('q_first_name').value,
+                            last_name: document.getElementById('q_last_name').value,
+                            company: document.getElementById('q_company').value,
+                            quantity: document.getElementById('q_quantity').value,
+                            email: document.getElementById('q_email').value,
+                            phone: document.getElementById('q_phone').value,
+                            product_category: document.getElementById('q_category').value,
+                            fabric_preference: document.getElementById('q_fabric').value,
+                            branding: document.getElementById('q_branding').value,
+                            delivery_location: document.getElementById('q_location').value,
+                            timeline: document.getElementById('q_timeline').value,
+                            message: document.getElementById('q_message').value,
+                            source_page: 'Quote Request'
+                        };
+
+                        try {
+                            const res = await fetch('http://localhost:3000/api/leads', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(data)
+                            });
+                            if (res.ok) {
+                                alert('Thank you! Your quote request has been submitted successfully.');
+                                document.getElementById('quoteForm').reset();
+                            } else {
+                                alert('Sorry, there was an error submitting your request. Please try again.');
+                            }
+                        } catch (err) {
+                            alert('Network error. Please check your connection and try again.');
+                        } finally {
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                        }
+                    });
+                </script>
+            </div>
+            
+            <!-- Right: Sidebar -->
+            <div class="quote-sidebar">
+                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--navy); margin-bottom: 30px; font-weight: 400;">Why Request a Quote With Us?</h3>
+                <ul class="quote-sb-list">
+                    <li>
+                        <div class="quote-sb-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="quote-sb-text">
+                            <h5>Tailored Pricing</h5>
+                            <p>We provide accurate pricing based on your exact specifications and quantity.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="quote-sb-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="quote-sb-text">
+                            <h5>Expert Guidance</h5>
+                            <p>Get professional advice on fabrics, trims, sampling, and production techniques.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="quote-sb-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                        <div class="quote-sb-text">
+                            <h5>Fast & Reliable Response</h5>
+                            <p>Our team responds quickly to help you move forward with confidence.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="quote-sb-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <div class="quote-sb-text">
+                            <h5>End-to-End Support</h5>
+                            <p>From concept to delivery, we support your brand at every step.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="quote-sb-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                        <div class="quote-sb-text">
+                            <h5>Flexible & Scalable</h5>
+                            <p>Whether it's a small batch or bulk order, we're built to scale with you.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="quote-next-box">
+                    <i class="fa-solid fa-pen-nib quote-next-box-icon"></i>
+                    <h4>What Happens Next?</h4>
+                    <ol>
+                        <li>We review your requirements</li>
+                        <li>Our team may reach out for details</li>
+                        <li>You'll receive a tailored quote</li>
+                        <li>Approve & start your production journey</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Grid -->
+    <section class="section-padding" style="background: var(--bg-cream); padding-top: 0;">
+        <div class="container quote-contact-cards">
+            <div class="q-contact-card">
+                <div class="q-contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="q-contact-text">
+                    <h6>WhatsApp Us</h6>
+                    <p>Chat with our team instantly</p>
+                    <a href="contact.html">Start Chat <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="q-contact-card">
+                <div class="q-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="q-contact-text">
+                    <h6>Call Us</h6>
+                    <p>Speak to our expert</p>
+                    <span style="display: block; font-size: 0.8rem; font-weight: 600; color: var(--gold); margin-top: 5px;">+1 (800) 841-2569</span>
+                </div>
+            </div>
+            <div class="q-contact-card">
+                <div class="q-contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="q-contact-text">
+                    <h6>Email Us</h6>
+                    <p>Drop us your requirements</p>
+                    <span style="display: block; font-size: 0.8rem; font-weight: 600; color: var(--gold); margin-top: 5px;">info@evolveclothing.com</span>
+                </div>
+            </div>
+            <div class="q-contact-card">
+                <div class="q-contact-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                <div class="q-contact-text">
+                    <h6>Schedule Consultation</h6>
+                    <p>Book a time that works for you</p>
+                    <a href="contact.html">Book Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="section-padding" style="background: var(--bg-cream); padding-top: 20px;">
+        <div class="container text-center">
+            <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--navy); margin-bottom: 50px; font-weight: 400;">How Our Quote Process Works</h2>
+            
+            <div class="quote-timeline">
+                <div class="q-timeline-step">
+                    <div class="q-step-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <div class="q-step-text">
+                        <h6>Share Requirements</h6>
+                        <p>Fill out the form with your product details and needs.</p>
+                    </div>
+                </div>
+                <div class="q-timeline-step">
+                    <div class="q-step-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div class="q-step-text">
+                        <h6>Review & Consultation</h6>
+                        <p>We understand your needs and may reach out for more details.</p>
+                    </div>
+                </div>
+                <div class="q-timeline-step">
+                    <div class="q-step-icon"><i class="fa-solid fa-swatchbook"></i></div>
+                    <div class="q-step-text">
+                        <h6>Sample / Fabric Discussion</h6>
+                        <p>We discuss fabrics, trims, sampling and production feasibility.</p>
+                    </div>
+                </div>
+                <div class="q-timeline-step">
+                    <div class="q-step-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                    <div class="q-step-text">
+                        <h6>Quote Preparation</h6>
+                        <p>Receive a detailed, transparent quote tailored to your order.</p>
+                    </div>
+                </div>
+                <div class="q-timeline-step">
+                    <div class="q-step-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                    <div class="q-step-text">
+                        <h6>Approval & Planning</h6>
+                        <p>Approve the quote and we plan your production timeline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="quote-stats">
+        <div class="container quote-stats-grid">
+            <div class="q-stat-item">
+                <div class="q-stat-icon"><i class="fa-regular fa-handshake"></i></div>
+                <div class="q-stat-text">
+                    <h4>18+</h4>
+                    <h6>Years Experience</h6>
+                    <p>in garment manufacturing</p>
+                </div>
+            </div>
+            <div class="q-stat-item">
+                <div class="q-stat-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="q-stat-text">
+                    <h4>1000+</h4>
+                    <h6>Happy Clients</h6>
+                    <p>across the globe</p>
+                </div>
+            </div>
+            <div class="q-stat-item">
+                <div class="q-stat-icon"><i class="fa-solid fa-shirt"></i></div>
+                <div class="q-stat-text">
+                    <h4>5000+</h4>
+                    <h6>Products Manufactured</h6>
+                    <p>with premium quality</p>
+                </div>
+            </div>
+            <div class="q-stat-item">
+                <div class="q-stat-icon"><i class="fa-solid fa-shield-check"></i></div>
+                <div class="q-stat-text">
+                    <h4>98%</h4>
+                    <h6>Client Satisfaction</h6>
+                    <p>trusted by global brands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="section-padding" style="background: var(--navy);">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <i class="fa-solid fa-pen-nib text-gold" style="font-size: 4rem;"></i>
+                <div>
+                    <h2 style="font-size: 2rem; color: var(--white); font-family: var(--font-serif); margin-bottom: 10px; font-weight: 400;">Ready to bring your apparel ideas to life?</h2>
+                    <p style="color: rgba(255,255,255,0.7); margin: 0;">Let's create high-quality, custom garments that represent your brand perfectly.</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 20px;">
+                <a href="quote.html" class="btn btn-primary" style="padding: 15px 30px; font-size: 1.1rem;">Request a Quote <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
+                <a href="contact.html" class="btn btn-outline" style="padding: 15px 30px; font-size: 1.1rem; border-color: rgba(255,255,255,0.2); color: var(--white);">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer site-footer">
+    <div class="container footer-inner">
+        <div class="footer-col" style="flex: 1.5;">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <i class="fa-solid fa-shirt text-gold" style="font-size:1.8rem;"></i>
+                <div class="logo-text">
+                    <h2 style="font-size: 1.25rem; margin: 0; font-weight: 700; letter-spacing: 1px; color: #ffffff; font-family: var(--font-serif); line-height: 1;">EVOLVE</h2>
+                    <span style="font-size: 0.5rem; letter-spacing: 3.5px; color: var(--gold); display: block; font-weight: 600; font-family: var(--font-sans); margin-top: 3px;">CLOTHING CO.</span>
+                </div>
+            </a>
+        </div>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 20px;">We develop & deliver modern textiles with precision manufacturing, sustainable practices, and a passion for creating excellence.</p>
+            <div class="social-links" style="display: flex; gap: 15px;">
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-instagram" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-linkedin-in" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-youtube" style="font-size: 0.8rem;"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-col" style="flex: 1;">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="index.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Home</a></li>
+                <li style="margin-bottom: 12px;"><a href="about.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="services.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Our Services</a></li>
+                <li style="margin-bottom: 12px;"><a href="gallery.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Gallery</a></li>
+                <li style="margin-bottom: 12px;"><a href="manufacturing.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Manufacturing</a></li>
+                <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="flex: 1;">
+            <h4>Company</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="about.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="blogs.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Blogs</a></li>
+                <li style="margin-bottom: 12px;"><a href="privacy.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Privacy Policy</a></li>
+                <li style="margin-bottom: 12px;"><a href="terms.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+                <div class="footer-col" style="flex: 1.4;">
+            <h4>Contact Info</h4>
+            <ul class="contact-info" style="list-style: none; padding: 0; margin: 0;">
+                <li style="display: flex; gap: 10px; margin-bottom: 12px; color: #94A3B8; font-size: 0.85rem; align-items: flex-start;">
+                    <i class="fa-solid fa-location-dot" style="color: var(--gold); margin-top: 4px; flex-shrink: 0;"></i>
+                    <a href="https://maps.google.com/?q=Evolve+Clothing+Company,+Gala+no+18,+Satyam+Industrial+Estate,+Subhash+Road,+Jogeshwari+East,+Mumbai+-+400060" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; line-height: 1.5; display: block;" title="Open in Google Maps">Gala no 18, Satyam Ind. Estate,<br>Subhash Road, Jogeshwari East,<br>Mumbai - 400060, India</a>
+                </li>
+                <li style="display: flex; gap: 10px; margin-bottom: 10px; color: #94A3B8; font-size: 0.85rem;">
+                    <i class="fa-solid fa-envelope" style="color: var(--gold); margin-top: 3px;"></i>
+                    <span class="dynamic-email">info@evolveclothingco.com</span>
+                </li>
+                <li style="display: flex; gap: 10px; color: #94A3B8; font-size: 0.85rem;">
+                    <i class="fa-solid fa-phone" style="color: var(--gold); margin-top: 3px;"></i>
+                    <span class="dynamic-phone">+91 98765 43210</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="flex: 1.5;">
+            <h4>Newsletter</h4>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Subscribe to our newsletter for updates on our insights.</p>
+            <div style="position: relative;">
+                <input type="email" placeholder="Enter your email" style="width: 100%; background: transparent; border: 1px solid rgba(255,255,255,0.2); padding: 10px 15px; color: white; font-size: 0.8rem; border-radius: 2px; outline: none; box-sizing: border-box;">
+                <button style="position: absolute; right: 5px; top: 5px; bottom: 5px; background: var(--gold); border: none; width: 30px; border-radius: 2px; color: white; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-top: 40px; gap: 8px;">
+        <p style="margin: 0;">&copy; 2026 Evolve Clothing Co. All rights reserved. &bull; <a href="https://kanishkinfotech.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Designed and Developed by Kanishk Infotech</a></p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+            <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html" style="color: inherit; text-decoration: none;">Terms & Conditions</a>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Widget -->
+<a href="https://wa.me/1234567890" class="dynamic-wa" target="_blank" style="position: fixed; bottom: 30px; left: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 9999; transition: transform 0.3s; text-decoration: none;">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+<script src="js/dynamic_settings.js"></script>
+</body>
+</html>

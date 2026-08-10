@@ -1,0 +1,85 @@
+<footer class="footer site-footer">
+    <div class="container footer-inner">
+        <div class="footer-col" style="flex: 1.5;">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <i class="fa-solid fa-shirt text-gold" style="font-size:1.8rem;"></i>
+                <div class="logo-text">
+                    <h2 style="font-size: 1.25rem; margin: 0; font-weight: 700; letter-spacing: 1px; color: #ffffff; font-family: var(--font-serif); line-height: 1;">EVOLVE</h2>
+                    <span style="font-size: 0.5rem; letter-spacing: 3.5px; color: var(--gold); display: block; font-weight: 600; font-family: var(--font-sans); margin-top: 3px;">CLOTHING CO.</span>
+                </div>
+            </a>
+        </div>
+            </div>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 20px;">We develop & deliver modern textiles with precision manufacturing, sustainable practices, and a passion for creating excellence.</p>
+            <div class="social-links" style="display: flex; gap: 15px;">
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-instagram" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-linkedin-in" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-youtube" style="font-size: 0.8rem;"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-col" style="flex: 1;">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Home</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/services' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Our Services</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/gallery' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Gallery</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/research-manufacturing' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Manufacturing</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="flex: 1;">
+            <h4>Company</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/about-us' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/blogs' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Blogs</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/privacy' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Privacy Policy</a></li>
+                <li style="margin-bottom: 12px;"><a href="<?php echo esc_url( home_url( '/terms' ) ); ?>" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+                <div class="footer-col" style="flex: 1.4;">
+            <h4>Contact Info</h4>
+            <ul class="contact-info" style="list-style: none; padding: 0; margin: 0;">
+                <li style="display: flex; gap: 10px; margin-bottom: 12px; color: #94A3B8; font-size: 0.85rem; align-items: flex-start;">
+                    <i class="fa-solid fa-location-dot" style="color: var(--gold); margin-top: 4px; flex-shrink: 0;"></i>
+                    <a href="https://maps.google.com/?q=Evolve+Clothing+Company,+Gala+no+18,+Satyam+Industrial+Estate,+Subhash+Road,+Jogeshwari+East,+Mumbai+-+400060" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; line-height: 1.5; display: block;" title="Open in Google Maps">Gala no 18, Satyam Ind. Estate,<br>Subhash Road, Jogeshwari East,<br>Mumbai - 400060, India</a>
+                </li>
+                <li style="display: flex; gap: 10px; margin-bottom: 10px; color: #94A3B8; font-size: 0.85rem;">
+                    <i class="fa-solid fa-envelope" style="color: var(--gold); margin-top: 3px;"></i>
+                    <span>info@evolveclothingco.com</span>
+                </li>
+                <li style="display: flex; gap: 10px; color: #94A3B8; font-size: 0.85rem;">
+                    <i class="fa-solid fa-phone" style="color: var(--gold); margin-top: 3px;"></i>
+                    <span>+91 98765 43210</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="flex: 1.5;">
+            <h4>Newsletter</h4>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Subscribe to our newsletter for updates on our insights.</p>
+            <div style="position: relative;">
+                <input type="email" placeholder="Enter your email" style="width: 100%; background: transparent; border: 1px solid rgba(255,255,255,0.2); padding: 10px 15px; color: white; font-size: 0.8rem; border-radius: 2px; outline: none; box-sizing: border-box;">
+                <button style="position: absolute; right: 5px; top: 5px; bottom: 5px; background: var(--gold); border: none; width: 30px; border-radius: 2px; color: white; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-top: 40px; gap: 8px;">
+        <p style="margin: 0;">&copy; <?php echo date('Y'); ?> Evolve Clothing Co. All rights reserved. &bull; <a href="https://kanishkinfotech.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Designed and Developed by Kanishk Infotech</a></p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+            <a href="<?php echo esc_url( home_url( '/privacy' ) ); ?>" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+            <span>|</span>
+            <a href="<?php echo esc_url( home_url( '/terms' ) ); ?>" style="color: inherit; text-decoration: none;">Terms & Conditions</a>
+        </div>
+    </div>
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>

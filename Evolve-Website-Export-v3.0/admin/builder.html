@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visual Page Builder | Evolve Admin</title>
+    
+    <!-- GrapesJS Core -->
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+    <script src="https://unpkg.com/grapesjs"></script>
+    
+    <!-- GrapesJS Webpage Preset -->
+    <script src="https://unpkg.com/grapesjs-preset-webpage"></script>
+    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
+    <script src="https://unpkg.com/grapesjs-plugin-forms"></script>
+    <script src="https://unpkg.com/grapesjs-tabs"></script>
+    <script src="https://unpkg.com/grapesjs-custom-code"></script>
+
+    <style>
+        body, html { height: 100%; margin: 0; padding: 0; overflow: hidden; font-family: sans-serif; }
+        #gjs { height: 100vh; }
+        
+        .admin-topbar {
+            background-color: #0f1c3f;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            box-sizing: border-box;
+        }
+        
+        .admin-topbar a { color: white; text-decoration: none; font-size: 0.9rem; }
+        .admin-topbar a:hover { text-decoration: underline; }
+        
+        .save-btn {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .save-btn:hover { background-color: #c4a132; }
+        .save-btn:disabled { background-color: #ccc; cursor: not-allowed; }
+
+        /* Make Style Manager more user-friendly for non-coders */
+        .gjs-sm-sector .gjs-sm-title[title="Dimension"] .gjs-sm-name { font-size: 0; }
+        .gjs-sm-sector .gjs-sm-title[title="Dimension"] .gjs-sm-name::after { content: "Spacing (Margins & Padding)"; font-size: 11px; }
+        
+        .gjs-sm-sector .gjs-sm-title[title="Decorations"] .gjs-sm-name { font-size: 0; }
+        .gjs-sm-sector .gjs-sm-title[title="Decorations"] .gjs-sm-name::after { content: "Backgrounds & Borders"; font-size: 11px; }
+    </style>
+</head>
+<body>
+    
+    <div class="admin-topbar">
+        <a href="dashboard.html">← Back to Dashboard</a>
+        <div style="font-weight: bold;">Editing: <span id="pageNameDisplay">Loading...</span></div>
+        <button id="saveBtn" class="save-btn" onclick="savePage()">Save Live Changes</button>
+    </div>
+
+    <!-- The GrapesJS Editor Container -->
+    <div id="gjs"></div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+        const token = localStorage.getItem('adminToken');
+        
+        if (!token) window.location.href = 'index.html';
+
+        // Get the page name from the URL query string (e.g., ?page=index.html)
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageFileName = urlParams.get('page');
+        
+        if (!pageFileName) {
+            alert('No page selected!');
+            window.location.href = 'dashboard.html';
+        }
+        
+        document.getElementById('pageNameDisplay').textContent = pageFileName;
+
+        let editor;
+
+        // Fetch the HTML and initialize the editor
+        async function loadPage() {
+            try {
+                const res = await fetch(`${API_URL}/pages/${pageFileName}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (!res.ok) {
+                    alert('Error loading page HTML from server.');
+                    return;
+                }
+                
+                const htmlContent = await res.text();
+                
+                // Initialize GrapesJS with the fetched HTML
+                editor = grapesjs.init({
+                    container: '#gjs',
+                    height: 'calc(100vh - 50px)',
+                    fromElement: false,
+                    components: htmlContent, // Load the raw HTML
+                    storageManager: false, // We will manually handle saving to our API
+                    plugins: [
+                        'gjs-preset-webpage',
+                        'grapesjs-blocks-basic',
+                        'grapesjs-plugin-forms',
+                        'grapesjs-tabs',
+                        'grapesjs-custom-code'
+                    ],
+                    pluginsOpts: {
+                        'gjs-preset-webpage': {
+                            // Preset options
+                            blocksBasicOpts: { flexGrid: true }
+                        }
+                    },
+                    canvas: {
+                        styles: [
+                            '../style.css', // Load the site's stylesheet into the editor canvas
+                            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
+                        ]
+                    }
+                });
+
+                editor.on('load', () => {
+                    // Force the Block Manager to open by default instead of Style Manager
+                    const blockManagerBtn = editor.Panels.getButton('views', 'open-blocks');
+                    if (blockManagerBtn) {
+                        blockManagerBtn.set('active', 1);
+                    }
+                    
+                    // Add some custom user-friendly blocks
+                    editor.BlockManager.add('evolve-hero', {
+                        label: 'Hero Section',
+                        category: 'Evolve Custom',
+                        content: `
+                        <div class="slide" style="background-color: #0f1c3f; padding: 100px 20px; text-align: center;">
+                            <div class="container slide-inner">
+                                <div class="hero-subtitle" style="color: #d4af37;">NEW SECTION</div>
+                                <h1 style="color: white;">Your Title Here</h1>
+                                <p style="color: white; max-width: 600px; margin: 0 auto;">Enter your description text here. You can click to edit this directly.</p>
+                            </div>
+                        </div>`
+                    });
+                });
+
+            } catch (err) {
+                console.error(err);
+                alert('Network error while loading page.');
+            }
+        }
+
+        async function savePage() {
+            const btn = document.getElementById('saveBtn');
+            btn.textContent = 'Saving...';
+            btn.disabled = true;
+            
+            // Get the full HTML (including doctype and head) from the editor
+            // GrapesJS separates HTML and CSS, but since we are modifying an existing full HTML page,
+            // we want the complete generated document.
+            const html = editor.getHtml();
+            const css = editor.getCss();
+            
+            // If they added custom CSS in the editor, we inject it before the closing head tag
+            let finalHtml = html;
+            if (css && css.trim() !== '') {
+                finalHtml = finalHtml.replace('</head>', `<style>${css}</style></head>`);
+            }
+            
+            // Re-inject the necessary scripts that GrapesJS strips out during editing
+            const scriptsToInject = `
+<!-- Required Scripts -->
+<script src="script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            const res = await fetch('http://localhost:3000/api/settings');
+            const settings = await res.json();
+            
+            // Dynamic Images
+            if (settings.home_hero_img_1) {
+                const slide1 = document.getElementById('home_hero_slide_1');
+                if (slide1) slide1.style.backgroundImage = \`linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.7)), url('http://localhost:3000\${settings.home_hero_img_1}')\`;
+            }
+            if (settings.home_hero_img_2) {
+                const slide2 = document.getElementById('home_hero_slide_2');
+                if (slide2) slide2.style.backgroundImage = \`linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.7)), url('http://localhost:3000\${settings.home_hero_img_2}')\`;
+            }
+            
+            // Dynamic Text
+            if (settings.company_phone) {
+                document.querySelectorAll('.dynamic-phone').forEach(el => el.textContent = settings.company_phone);
+            }
+            if (settings.company_email) {
+                document.querySelectorAll('.dynamic-email').forEach(el => el.textContent = settings.company_email);
+            }
+            if (settings.company_address) {
+                document.querySelectorAll('.dynamic-address').forEach(el => el.textContent = settings.company_address);
+            }
+        } catch(err) {
+            console.error('Error loading dynamic settings:', err);
+        }
+    });
+</script>
+</body>`;
+            
+            if (finalHtml.includes('</body>')) {
+                finalHtml = finalHtml.replace('</body>', scriptsToInject);
+            } else {
+                finalHtml += scriptsToInject;
+            }
+            
+            // Add Doctype back (GrapesJS strips it)
+            finalHtml = '<!DOCTYPE html>\n' + finalHtml;
+
+            try {
+                const res = await fetch(`${API_URL}/pages/${pageFileName}`, {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}` 
+                    },
+                    body: JSON.stringify({ html: finalHtml })
+                });
+                
+                if (res.ok) {
+                    alert('Page saved successfully!');
+                } else {
+                    alert('Error saving page.');
+                }
+            } catch (err) {
+                alert('Network error while saving.');
+            } finally {
+                btn.textContent = 'Save Live Changes';
+                btn.disabled = false;
+            }
+        }
+
+        // Start loading
+        loadPage();
+    </script>
+</body>
+</html>

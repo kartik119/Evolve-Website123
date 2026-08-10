@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Our Gallery | Evolve Clothing Co.</title>
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header (Same globally) -->
+    <header class="site-header">
+    <div class="container header-inner">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <i class="fa-solid fa-shirt text-gold" style="font-size:1.6rem;"></i>
+                <span style="font-family: var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--navy); letter-spacing:1px; line-height:1;">EVOLVE<span style="font-size:0.5rem; letter-spacing:3.5px; font-family:var(--font-sans); color:var(--text-light); display:block; margin-top:2px; font-weight:600;">CLOTHING CO.</span></span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul style="display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; align-items: center;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="has-dropdown"><a href="services.html">Our Services <i class="fa-solid fa-chevron-down" style="font-size:0.6rem; margin-left:2px;"></i></a>
+                    <ul class="dropdown-menu mega-menu">
+                        <li>
+                            <a href="services.html">
+                                <img src="images/white_label_featured_1779784066592.png" alt="White-Label Manufacturing">
+                                <span>White-Label Manufacturing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kids.html">
+                                <img src="images/kids_featured_1779784085703.png" alt="Kidswear Manufacturing">
+                                <span>Kidswear Manufacturing</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="uniforms.html">
+                                <img src="images/gal_custom_shirt_1.jpg" alt="Uniform Manufacturing">
+                                <span>Uniform Manufacturing</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html" class="active" style="color: var(--gold);">Gallery</a></li>
+                <li><a href="manufacturing.html">Research & Manufacturing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="https://wa.me/919833323469" target="_blank" rel="noopener" class="icon-link dynamic-wa" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="quote.html" class="btn btn-navy" style="padding: 12px 24px; font-size:0.75rem;">REQUEST QUOTE</a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="section-padding" style="background: var(--bg-light); overflow: hidden;">
+        <div class="container gal-hero" style="display: flex; gap: 60px; align-items: center;">
+            <div style="flex: 1;">
+                <p style="color: var(--gold); font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; margin-bottom: 15px; text-transform: uppercase;">Our Gallery</p>
+                <h1 style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 25px; line-height: 1.2; color: var(--navy);">Explore Our Product<br>& Manufacturing Gallery</h1>
+                <p style="color: var(--text-light); margin-bottom: 35px; font-size: 1.1rem; line-height: 1.6; max-width: 500px;">A glimpse into our world of premium shirts, uniforms, kidswear, fine fabrics and precision manufacturing. Every stitch reflects our commitment to quality, craftsmanship and trust.</p>
+                
+                <div style="display: flex; gap: 20px;">
+                    <a href="#" class="btn btn-primary">VIEW LOOKBOOK <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+                    <a href="quote.html" class="btn btn-outline-navy">REQUEST A QUOTE <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+                </div>
+            </div>
+            <div style="flex: 1; width: 100%;">
+                <img src="images/gallery_hero_single.jpg" alt="Explore Our Product & Manufacturing Gallery" style="width: 100%; height: 450px; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 45px rgba(0,0,0,0.12); display: block;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section style="border-bottom: 1px solid var(--border-color); background: white; padding: 30px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-tools text-gold" style="font-size: 1.5rem;"></i>
+                <div><strong style="display:block; font-size: 1.2rem;">18+</strong><span style="font-size: 0.75rem; color: var(--text-light);">Years Experience</span></div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-cubes text-gold" style="font-size: 1.5rem;"></i>
+                <div><strong style="display:block; font-size: 1.2rem;">500+</strong><span style="font-size: 0.75rem; color: var(--text-light);">Happy Clients</span></div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-shirt text-gold" style="font-size: 1.5rem;"></i>
+                <div><strong style="display:block; font-size: 1.2rem;">1,500,000+</strong><span style="font-size: 0.75rem; color: var(--text-light);">Products Manufactured</span></div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-shield-check text-gold" style="font-size: 1.5rem;"></i>
+                <div><strong style="display:block; font-size: 1.2rem;">98%</strong><span style="font-size: 0.75rem; color: var(--text-light);">Client Satisfaction</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Gallery Section -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <!-- Filters -->
+            <div class="gal-filters">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="shirts">Shirts</button>
+                <button data-filter="uniforms">Uniforms</button>
+                <button data-filter="kidswear">Kidswear</button>
+                <button data-filter="fabrics">Fabrics</button>
+                <button data-filter="manufacturing">Manufacturing</button>
+                <button data-filter="corporate">Corporate Wear</button>
+                            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gal-main-grid" id="main-gallery">
+                <!-- Shirts (6 Uploaded Shirt Collection Images) -->
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_shirt_blue.jpg" alt="Sky Blue Tailored Oxford Shirt">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Sky Blue Tailored Oxford Shirt
+                    </div>
+                </div>
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_shirt_blue_details.jpg" alt="Executive Blue Shirt & Stitch Details">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Executive Blue Shirt & Stitch Details
+                    </div>
+                </div>
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_shirt_cream.jpg" alt="Classic Cream Fine Linen Shirt">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Classic Cream Fine Linen Shirt
+                    </div>
+                </div>
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_shirt_lavender.jpg" alt="Pastel Lavender Business Shirt">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Pastel Lavender Business Shirt
+                    </div>
+                </div>
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_shirt_mint.jpg" alt="Contemporary Mint Green Shirt">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Contemporary Mint Green Shirt
+                    </div>
+                </div>
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_shirt_peach.jpg" alt="Elegant Peach Custom Shirt">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Elegant Peach Custom Shirt
+                    </div>
+                </div>
+
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_custom_shirt_1.jpg" alt="Custom Purple Checkered Shirt Design">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Custom Purple Checkered Shirt Design
+                    </div>
+                </div>
+
+                <div class="gal-item filter-item shirts">
+                    <img src="images/gal_custom_shirt_2.jpg" alt="Stack of Premium Casual Shirts">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Stack of Premium Casual Shirts
+                    </div>
+                </div>
+
+                <!-- Uniforms -->
+                <div class="gal-item filter-item uniforms">
+                    <img src="images/uniform_showroom_hero.jpg" alt="Custom Uniform Showroom">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Uniform Showroom Collection
+                    </div>
+                </div>
+
+                <div class="gal-item filter-item uniforms">
+                    <img src="images/uni_cat_6.jpg" alt="Security & Tactical Uniforms">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Security Officer & Tactical Wear
+                    </div>
+                </div>
+                <div class="gal-item filter-item uniforms">
+                    <img src="images/uni_cat_4.jpg" alt="Healthcare Medical Scrubs">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Medical Scrubs & Doctor Coats
+                    </div>
+                </div>
+
+                <!-- Kidswear -->
+                <div class="gal-item filter-item kidswear">
+                    <img src="images/kids_col_tees.jpg" alt="Kids Tees, Polos & Henleys">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Kids Tees & Casualwear
+                    </div>
+                </div>
+
+                <div class="gal-item filter-item kidswear">
+                    <img src="images/kids_col_occasion.jpg" alt="Kids Occasion & Partywear">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Kids Occasion & Partywear
+                    </div>
+                </div>
+                <div class="gal-item filter-item kidswear">
+                    <img src="images/kids_col_infant.jpg" alt="Infant Rompers & Onesies">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Infant Rompers & Onesies
+                    </div>
+                </div>
+
+                <!-- Fabrics -->
+                <div class="gal-item filter-item fabrics">
+                    <img src="images/kids_organic_fabrics.jpg" alt="100% Organic Cotton Fabrics">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> 100% Organic Cotton Fabrics
+                    </div>
+                </div>
+                <div class="gal-item filter-item fabrics">
+                    <img src="images/mfg_hero_sketch_display.jpg" alt="Technical Sketch & Swatches">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Technical Sketch & Swatches
+                    </div>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="gal-item filter-item manufacturing">
+                    <img src="images/uni_why_3.jpg" alt="Industrial Sewing Machine Floor">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Industrial Sewing Floor
+                    </div>
+                </div>
+                <div class="gal-item filter-item manufacturing">
+                    <img src="images/uni_why_2.jpg" alt="Quality Control Inspection">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Quality Control & Measurement
+                    </div>
+                </div>
+                <div class="gal-item filter-item manufacturing">
+                    <img src="images/uni_why_1.jpg" alt="Custom Branding & Packaging">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Custom Branding & Packaging
+                    </div>
+                </div>
+
+                <!-- Corporate Wear -->
+
+                <div class="gal-item filter-item corporate">
+                    <img src="images/uni_cat_2.jpg" alt="Corporate Executive Uniform Collection">
+                    <div class="gal-item-overlay">
+                        <i class="fa-regular fa-folder-open" style="color: var(--gold);"></i> Executive Corporate Suits
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Collections -->
+    <section class="section-padding" style="background: var(--bg-light);">
+        <div class="container gal-curated" style="display: flex; gap: 30px; align-items: center;">
+            <div style="flex: 1; padding-right: 20px;">
+                <h3 style="font-size: 2rem; color: var(--navy); margin-bottom: 20px;">Curated Collections &<br>Production Highlights</h3>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6;">Premium designs. Precision manufacturing. Collections that define quality and style.</p>
+                <a href="#" class="btn btn-primary">VIEW LOOKBOOK <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></a>
+            </div>
+            <div style="flex: 1.5; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                <div>
+                    <img src="images/gal_shirt_blue_details.jpg" alt="Premium Shirt Collection" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <h5 style="font-size: 0.9rem; color: var(--navy); margin-bottom: 5px;">Premium Shirt Collection</h5>
+                    <p style="font-size: 0.75rem; color: var(--text-light);">Fine fabrics & timeless styles</p>
+                </div>
+                <div>
+                    <img src="images/gal_shirt_mint.jpg" alt="Tailored Shirt Collection" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <h5 style="font-size: 0.9rem; color: var(--navy); margin-bottom: 5px;">Tailored Shirt Collection</h5>
+                    <p style="font-size: 0.75rem; color: var(--text-light);">Smart, durable & comfortable</p>
+                </div>
+                <div>
+                    <img src="images/kids_division_boutique.jpg" alt="Kidswear Collection" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <h5 style="font-size: 0.9rem; color: var(--navy); margin-bottom: 5px;">Kidswear Collection</h5>
+                    <p style="font-size: 0.75rem; color: var(--text-light);">Soft, safe & stylish for little ones</p>
+                </div>
+                <div>
+                    <img src="images/single_needle_stitch_user.jpg" alt="Manufacturing Excellence" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px; margin-bottom: 15px;">
+                    <h5 style="font-size: 0.9rem; color: var(--navy); margin-bottom: 5px;">Manufacturing Excellence</h5>
+                    <p style="font-size: 0.75rem; color: var(--text-light);">Precision at every step</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Grid -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container text-center">
+            <h2 class="section-title">Gallery by Category</h2>
+            <div class="gal-cat-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px;">
+                <a href="#" class="gal-cat-card">
+                    <i class="fa-solid fa-shirt"></i>
+                    <h4>Shirts</h4>
+                    <p>Formal, casual & corporate shirt collections.</p>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+                <a href="uniforms.html" class="gal-cat-card">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h4>Uniforms</h4>
+                    <p>Corporate, industrial & hospitality uniforms.</p>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+                <a href="kids.html" class="gal-cat-card">
+                    <i class="fa-solid fa-child"></i>
+                    <h4>Kidswear</h4>
+                    <p>Trendy, comfortable & safe kids clothing.</p>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+                <a href="#" class="gal-cat-card">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h4>Fabrics</h4>
+                    <p>Premium fabrics sourced for lasting quality.</p>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+                <a href="manufacturing.html" class="gal-cat-card">
+                    <i class="fa-solid fa-industry"></i>
+                    <h4>Manufacturing</h4>
+                    <p>End-to-end production with precision & care.</p>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+                <a href="#" class="gal-cat-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h4>Corporate Wear</h4>
+                    <p>Professional wear for teams that represent brands.</p>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Behind the Craft -->
+    <section class="section-padding" style="background: var(--bg-light);">
+        <div class="container text-center">
+            <h2 class="section-title">Behind the Craft</h2>
+            <div class="craft-timeline">
+                <div class="craft-step">
+                    <img src="images/gal_craft_1.jpg" alt="Consultation">
+                    <h5>1. Consultation</h5>
+                    <p>Understanding your needs</p>
+                </div>
+                <div class="craft-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="craft-step">
+                    <img src="images/gal_craft_2.jpg" alt="Sampling">
+                    <h5>2. Sampling</h5>
+                    <p>Developing the perfect fit</p>
+                </div>
+                <div class="craft-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="craft-step">
+                    <img src="images/gal_craft_3.jpg" alt="Stitching">
+                    <h5>3. Stitching</h5>
+                    <p>Precision stitching begins</p>
+                </div>
+                <div class="craft-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="craft-step">
+                    <img src="images/gal_craft_4.jpg" alt="Quality Check">
+                    <h5>4. Quality Check</h5>
+                    <p>Every piece is inspected</p>
+                </div>
+                <div class="craft-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="craft-step">
+                    <img src="images/gal_craft_5.jpg" alt="Packaging">
+                    <h5>5. Packaging</h5>
+                    <p>Neatly packed with care</p>
+                </div>
+                <div class="craft-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <div class="craft-step">
+                    <img src="images/gal_craft_6.jpg" alt="Delivery">
+                    <h5>6. Delivery</h5>
+                    <p>Delivered on time, every time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Brands -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container gal-tb-split">
+            <div class="gal-testimonial">
+                <div>
+                    <h3 style="font-size: 1.2rem; color: var(--navy); margin-bottom: 25px;">What Our Clients Say</h3>
+                    <i class="fa-solid fa-quote-left" style="color: var(--gold); font-size: 1.5rem; margin-bottom: 15px;"></i>
+                    <p style="font-size: 0.95rem; color: var(--navy); line-height: 1.6; font-style: italic; margin-bottom: 25px;">"Evolve Clothing Co. has been our trusted partner for uniforms and corporate wear. Their quality, attention to detail and delivery commitment are truly exceptional."</p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="https://ui-avatars.com/api/?name=Rahul+Mehta&background=0f1c3f&color=fff" alt="Rahul" style="width: 45px; height: 45px; border-radius: 50%;">
+                        <div>
+                            <h5 style="margin: 0; font-size: 0.9rem; color: var(--navy);">Rahul Mehta</h5>
+                            <span style="font-size: 0.75rem; color: var(--text-light);">Operations Manager, Nexus Brands</span>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; align-self: flex-end;">
+                    <button style="width: 30px; height: 30px; background: white; border: 1px solid var(--border-color); border-radius: 50%; cursor: pointer;"><i class="fa-solid fa-chevron-left text-light"></i></button>
+                    <button style="width: 30px; height: 30px; background: white; border: 1px solid var(--border-color); border-radius: 50%; cursor: pointer;"><i class="fa-solid fa-chevron-right text-light"></i></button>
+                </div>
+            </div>
+            <div class="gal-brands">
+                <h3 style="font-size: 1.2rem; color: var(--navy); margin-bottom: 25px;">Trusted by Leading Brands & Institutions</h3>
+                <div class="gal-brand-grid">
+                    <div class="gal-brand-box">
+                        <i class="fa-solid fa-building"></i>
+                        <h6>NEXUS</h6>
+                        <p>BRANDS</p>
+                    </div>
+                    <div class="gal-brand-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h6>ROYAL</h6>
+                        
+                    </div>
+                    <div class="gal-brand-box">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        <h6>HEALTH PLUS</h6>
+                        <p>HOSPITALITY</p>
+                    </div>
+                    <div class="gal-brand-box">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h6>PRIME TECH</h6>
+                        <p>SOLUTIONS</p>
+                    </div>
+                    <div class="gal-brand-box">
+                        <i class="fa-solid fa-city"></i>
+                        <h6>URBAN EDGE</h6>
+                        <p>CORPORATE</p>
+                    </div>
+                    <div class="gal-brand-box">
+                        <i class="fa-solid fa-leaf"></i>
+                        <h6>GREENFIELD</h6>
+                        <p>UNIVERSITY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section id="quote" class="final-cta">
+        <div class="container">
+            <h2>READY TO START YOUR CUSTOM CLOTHING ORDER?</h2>
+            <p>Share your requirement and our team will help you with<br>fabric selection, sampling, pricing and production planning.</p>
+            <div class="cta-btns">
+                <a href="quote.html" class="btn btn-gold">REQUEST A QUOTE <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://wa.me/919833323469" target="_blank" rel="noopener" class="btn btn-outline dynamic-wa" style="color:var(--white); border-color:var(--white);">WHATSAPP US <i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer site-footer">
+    <div class="container footer-inner">
+        <div class="footer-col" style="flex: 1.5;">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <i class="fa-solid fa-shirt text-gold" style="font-size:1.8rem;"></i>
+                <div class="logo-text">
+                    <h2 style="font-size: 1.25rem; margin: 0; font-weight: 700; letter-spacing: 1px; color: #ffffff; font-family: var(--font-serif); line-height: 1;">EVOLVE</h2>
+                    <span style="font-size: 0.5rem; letter-spacing: 3.5px; color: var(--gold); display: block; font-weight: 600; font-family: var(--font-sans); margin-top: 3px;">CLOTHING CO.</span>
+                </div>
+            </a>
+        </div>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 20px;">We develop & deliver modern textiles with precision manufacturing, sustainable practices, and a passion for creating excellence.</p>
+            <div class="social-links" style="display: flex; gap: 15px;">
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-facebook-f" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-instagram" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-linkedin-in" style="font-size: 0.8rem;"></i></a>
+                <a href="#" style="color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;"><i class="fa-brands fa-youtube" style="font-size: 0.8rem;"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-col" style="flex: 1;">
+            <h4>Quick Links</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="index.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Home</a></li>
+                <li style="margin-bottom: 12px;"><a href="about.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="services.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Our Services</a></li>
+                <li style="margin-bottom: 12px;"><a href="gallery.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Gallery</a></li>
+                <li style="margin-bottom: 12px;"><a href="manufacturing.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Manufacturing</a></li>
+                <li style="margin-bottom: 12px;"><a href="contact.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="flex: 1;">
+            <h4>Company</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 12px;"><a href="about.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">About Us</a></li>
+                <li style="margin-bottom: 12px;"><a href="blogs.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Blogs</a></li>
+                <li style="margin-bottom: 12px;"><a href="privacy.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Privacy Policy</a></li>
+                <li style="margin-bottom: 12px;"><a href="terms.html" style="color: #94A3B8; text-decoration: none; font-size: 0.85rem;">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+                <div class="footer-col" style="flex: 1.4;">
+            <h4>Contact Info</h4>
+            <ul class="contact-info" style="list-style: none; padding: 0; margin: 0;">
+                <li style="display: flex; gap: 10px; margin-bottom: 12px; color: #94A3B8; font-size: 0.85rem; align-items: flex-start;">
+                    <i class="fa-solid fa-location-dot" style="color: var(--gold); margin-top: 4px; flex-shrink: 0;"></i>
+                    <a href="https://maps.google.com/?q=Evolve+Clothing+Company,+Gala+no+18,+Satyam+Industrial+Estate,+Subhash+Road,+Jogeshwari+East,+Mumbai+-+400060" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; line-height: 1.5; display: block;" title="Open in Google Maps">Gala no 18, Satyam Ind. Estate,<br>Subhash Road, Jogeshwari East,<br>Mumbai - 400060, India</a>
+                </li>
+                <li style="display: flex; gap: 10px; margin-bottom: 10px; color: #94A3B8; font-size: 0.85rem;">
+                    <i class="fa-solid fa-envelope" style="color: var(--gold); margin-top: 3px;"></i>
+                    <span>info@evolveclothingco.com</span>
+                </li>
+                <li style="display: flex; gap: 10px; color: #94A3B8; font-size: 0.85rem;">
+                    <i class="fa-solid fa-phone" style="color: var(--gold); margin-top: 3px;"></i>
+                    <span>+91 98765 43210</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col" style="flex: 1.5;">
+            <h4>Newsletter</h4>
+            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-bottom: 15px;">Subscribe to our newsletter for updates on our insights.</p>
+            <div style="position: relative;">
+                <input type="email" placeholder="Enter your email" style="width: 100%; background: transparent; border: 1px solid rgba(255,255,255,0.2); padding: 10px 15px; color: white; font-size: 0.8rem; border-radius: 2px; outline: none; box-sizing: border-box;">
+                <button style="position: absolute; right: 5px; top: 5px; bottom: 5px; background: var(--gold); border: none; width: 30px; border-radius: 2px; color: white; cursor: pointer;"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    
+        <div class="container" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.5); margin-top: 40px; gap: 8px;">
+        <p style="margin: 0;">&copy; 2026 Evolve Clothing Co. All rights reserved. &bull; <a href="https://kanishkinfotech.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Designed and Developed by Kanishk Infotech</a></p>
+        <div style="display: flex; gap: 20px; justify-content: center;">
+            <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html" style="color: inherit; text-decoration: none;">Terms & Conditions</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Filtering Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.gal-filters button');
+            const galleryItems = document.querySelectorAll('.filter-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // First, fade out items that should be hidden
+                    let itemsToHide = 0;
+                    galleryItems.forEach(item => {
+                        if (filterValue !== 'all' && !item.classList.contains(filterValue)) {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            if (item.style.display !== 'none') {
+                                itemsToHide++;
+                            }
+                        }
+                    });
+
+                    // Wait for fade out transition (300ms) before changing layout
+                    const delay = itemsToHide > 0 ? 300 : 0;
+                    
+                    setTimeout(() => {
+                        galleryItems.forEach(item => {
+                            if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                                item.style.display = 'block';
+                                // Slight delay to ensure display:block is rendered before fading in
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 50);
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }, delay);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
