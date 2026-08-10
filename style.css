@@ -1752,11 +1752,11 @@ img {
 .mfg-form-input:focus { border-color: var(--gold); }
 .mfg-form-btn { background: var(--gold); color: white; border: none; padding: 12px 25px; font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 10px; border-radius: 2px; }
 
-.mfg-contact-features { flex: 1; background: #0f1c3f; padding: 60px 40px; color: white; display: flex; flex-direction: column; justify-content: center; gap: 30px; }
+.mfg-contact-features { flex: 1; background: #ffffff; padding: 60px 40px; color: var(--navy); display: flex; flex-direction: column; justify-content: center; gap: 30px; }
 .mfg-feature-item { display: flex; gap: 15px; align-items: flex-start; }
 .mfg-feature-item i { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; }
-.mfg-feature-item h6 { font-size: 0.85rem; margin: 0 0 5px 0; color: white; }
-.mfg-feature-item p { font-size: 0.7rem; color: rgba(255,255,255,0.6); margin: 0; line-height: 1.4; }
+.mfg-feature-item h6 { font-size: 0.85rem; margin: 0 0 5px 0; color: var(--navy); }
+.mfg-feature-item p { font-size: 0.7rem; color: var(--text-light); margin: 0; line-height: 1.4; }
 
 @media (max-width: 1200px) {
     .mfg-grid-5 { grid-template-columns: repeat(3, 1fr); }
