@@ -405,36 +405,36 @@ function initMobileNav() {
         });
 
         // Close menu on ESC key press
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mainNav.classList.contains('active')) {
-                toggleMenu(false);
-            }
-        });
-
+        navToggle.addEventListener('click', () => toggleMenu());
+        
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!mainNav.contains(e.target) && !navToggle.contains(e.target) && mainNav.classList.contains('active')) {
+            if (mainNav.classList.contains('active') && !mainNav.contains(e.target) && !navToggle.contains(e.target)) {
                 toggleMenu(false);
             }
         });
 
-        // Reset state on window resize above 991px
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 991 && mainNav.classList.contains('active')) {
-                toggleMenu(false);
-            }
+        // Handle dropdown toggles on mobile
+        const dropdowns = document.querySelectorAll('.has-dropdown > a');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.parentElement.classList.toggle('active');
+                }
+            });
         });
     }
 }
 
-// Testimonial Slider Logic
+// Testimonial Slider
 document.addEventListener('DOMContentLoaded', () => {
     const testiSlides = document.querySelectorAll('.testi-slide');
-    const testiPrev = document.getElementById('testi-prev');
     const testiNext = document.getElementById('testi-next');
+    const testiPrev = document.getElementById('testi-prev');
     let currentTestiSlide = 0;
 
-    if (testiSlides.length > 0 && testiPrev && testiNext) {
+    if (testiSlides.length > 0 && testiNext && testiPrev) {
         function showTestiSlide(index) {
             testiSlides.forEach(slide => {
                 slide.classList.remove('active-slide');
@@ -457,4 +457,14 @@ document.addEventListener('DOMContentLoaded', () => {
             showTestiSlide(index);
         });
     }
+});
+
+// Append WhatsApp pre-filled message globally
+document.addEventListener('DOMContentLoaded', () => {
+    const waMsg = encodeURIComponent("Hello Evolve Clothing Co.! I am interested in your custom manufacturing services. Could you share more details?");
+    document.querySelectorAll('a[href^="https://wa.me"]').forEach(link => {
+        if (!link.href.includes('text=')) {
+            link.href = link.href + (link.href.includes('?') ? '&' : '?') + 'text=' + waMsg;
+        }
+    });
 });

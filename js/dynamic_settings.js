@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         // WhatsApp Links
         if (settings.company_phone) {
             const cleanPhone = settings.company_phone.replace(/\D/g, '');
+            const waMessage = encodeURIComponent("Hello Evolve Clothing Co.! I am interested in your custom manufacturing services. Could you share more details?");
             waEls.forEach(el => {
-                el.href = `https://wa.me/${cleanPhone}`;
+                el.href = `https://wa.me/${cleanPhone}?text=${waMessage}`;
             });
         }
     } catch (err) {
