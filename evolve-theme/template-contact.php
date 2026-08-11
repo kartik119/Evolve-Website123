@@ -43,7 +43,7 @@ get_header();
                         <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-info-text">
                             <h5>Address</h5>
-                            <p>Germantown, 785 19th Street,<br>Office 478, North Dakota, ND 58568,<br>United States</p>
+                            <p>Gala no 18, Satyam Industrial Estate,<br>Subhash Road, Jogeshwari East,<br>Mumbai - 400060, India</p>
                         </div>
                     </div>
                 </div>
